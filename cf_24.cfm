@@ -36,7 +36,7 @@
 </head>
 <body>  
     <cfif structKeyExists(form,'inputSubmit')>
-    <cfinvoke component="cf_24" method="savesubscribers" returnvariable="result">
+    <cfinvoke component="components.cf_24" method="savesubscribers" returnvariable="result">
         <cfinvokeargument name="username"  value = "#form.username#" />
         <cfinvokeargument name="useremail"  value = "#form.useremail#" /> 
     </cfinvoke>

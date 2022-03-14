@@ -9,15 +9,15 @@
 <body>
     <div class="container mt-3">
         <h2>Task 5</h2>
-        <cfinvoke component="cf_5" method="ageSinceDOB" returnvariable="result">
+        <cfinvoke component="components.cf_5" method="ageSinceDOB" returnvariable="result">
               <cfinvokeargument name="dob"  value = "1/26/1959"/>
         </cfinvoke>  
-        <cfinvoke component="cf_5" method="ageSinceDOB" returnvariable="resultSon">
+        <cfinvoke component="components.cf_5" method="ageSinceDOB" returnvariable="resultSon">
              <cfinvokeargument name="dob"  value = "11/21/1991"/>
         </cfinvoke> 
             <cfoutput>Mother Age (1/26/1959)=#result#</cfoutput><br>
             <cfoutput>User Age (11/21/1991)=#resultSon#</cfoutput><br>
-        <cfinvoke component="cf_5" method="deliverage" returnvariable="resultdeliver">
+        <cfinvoke component="components.cf_5" method="deliverage" returnvariable="resultdeliver">
             <cfinvokeargument name="dob"  value = "1/26/1959"/>
         </cfinvoke>         
             <cfoutput>Deliver Age =#resultdeliver#</cfoutput><br>

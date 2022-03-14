@@ -55,7 +55,7 @@
     </cfif>
         <cfset concatendatedSring1="#form.Field25#"&"#form.Field251#"&"#form.Field252#">
         <cfset concatendatedSring2="#form.Field16#"&"#form.Field161#">
-        <cfinvoke component="cf_23" method="saveEmployee" returnvariable="result">
+        <cfinvoke component="components.cf_23" method="saveEmployee" returnvariable="result">
             <cfinvokeargument name="position"  value = "#form.Field17#" />
             <cfinvokeargument name="relocate"  value = "#form.Field19#" />
             <cfinvokeargument name="start_date"  value = "#form.Field20#" />

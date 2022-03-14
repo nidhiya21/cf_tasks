@@ -23,7 +23,7 @@
             </form> 
         </div>
         <cfif structKeyExists(form,'formSubmit')>
-            <cfinvoke component="cf_26" method="readText" returnvariable="result">
+            <cfinvoke component="components.cf_26" method="readText" returnvariable="result">
             </cfinvoke>      
             <cfloop query="result">
                 <cfif #count# GTE 4>
