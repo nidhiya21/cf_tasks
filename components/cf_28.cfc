@@ -1,4 +1,5 @@
  <cfcomponent>
+    <!---get user list--->
    <cffunction name="getUsers" access="public" output="false" returntype="query">		     
         <cfquery name="getUsersDet">
             SELECT *
@@ -8,6 +9,7 @@
         </cfquery>
         <cfreturn getUsersDet />
     </cffunction>
+    <!---delete user --->
     <cffunction name="deleteuser" access="remote" output="false">		     
         <cfquery name="deleteuserDet">
             delete from contentpages  where pageid=<cfqueryparam cfsqltype="cf_sql_bigint" value="#url.did#">
@@ -15,6 +17,7 @@
         <cfoutput>Page deleted successfully</cfoutput>
         <cflocation url="cf28_welcome.cfm" addtoken="No">
     </cffunction>
+    <!---get content pages --->
     <cffunction name="getPagesVal" access="public" output="false" >	 
         <cfquery name = "pageList"> 
             SELECT pageid, pagename, pagedesc
@@ -23,6 +26,7 @@
         </cfquery>
         <cfreturn pageList/>  
     </cffunction>
+    <!---get page detail --->
     <cffunction name="pageView" access="public" output="false" >
         <cfargument name="pageid" type="numeric" required="yes" >	 
         <cfquery name = "pageViewDet"> 
@@ -31,6 +35,7 @@
         </cfquery>
         <cfreturn pageViewDet/>  
     </cffunction> 
+    <!---add new page --->
     <cffunction name="insertPage" access="public" output="false" >
         <cfargument name="pagename" type="string">
         <cfargument name="pagedesc" type="string">	 
@@ -44,6 +49,7 @@
         <cfset getNumberOfRecords = listLen(#pageResult.generated_key#)> 
         <cfreturn getNumberOfRecords>
     </cffunction>
+    <!---updte page --->
     <cffunction name="updatePage" access="public" output="false" >
         <cfargument name="pageid" type="numeric"  >	
         <cfargument name="pagename" type="string" >

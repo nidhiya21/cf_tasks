@@ -19,17 +19,17 @@
             <a href="cf28_new.cfm">Add Page</a> 
             <table cellpadding = 1 cellspacing = 1> 
                 <tr> 
-                    <td bgcolor = f0f0f0> <b>&nbsp;</b>  </td> 
-                    <td bgcolor = f0f0f0> <b>Page name</b> </td> 
-                    <td bgcolor = f0f0f0> <b>Page description</b> </td> 
-                    <td bgcolor = f0f0f0> <b>Action</b>  </td>
+                    <td> <b>&nbsp;</b>  </td> 
+                    <td> <b>Page name</b> </td> 
+                    <td> <b>Page description</b> </td> 
+                    <td> <b>Action</b>  </td>
                 </tr>  
                 <cfoutput query="pageList" >
                 <tr>
-                    <td valign = top bgcolor = ffffed> <b>#pageList.currentRow#</b> </td>
-                    <td valign = top> <font size = "-1">#pageList.pagename#</font> </td> 
-                    <td valign = top> <font size = "-1">#pageList.pagedesc#</font> </td>
-                    <td valign = top> <font size = "-1">
+                    <td valign = top> <b>#pageList.currentRow#</b> </td>
+                    <td valign = top> #pageList.pagename#</font> </td> 
+                    <td valign = top> #pageList.pagedesc#</font> </td>
+                    <td valign = top> 
                     <a href="cf28_new.cfm?id=#pageList.pageid#">Edit</a> / <a href="cf_28.cfc?method=deleteuser&did=#pageList.pageid#">Delete</a></font> </td>  
                 </tr> 
                 </cfoutput> 

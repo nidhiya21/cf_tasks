@@ -99,7 +99,7 @@
                             </select>
                          </div>
                 </li>
-                <li id="fo54li19" class="     ">
+                <li id="fo54li19">
                     <fieldset>
                         <legend id="title19" class="desc notranslate">
                             Are you willing to relocate?
