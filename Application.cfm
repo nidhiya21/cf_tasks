@@ -1,3 +1,0 @@
-<CFAPPLICATION NAME="myApplication"
-SESSIONMANAGEMENT="Yes"
-SESSIONTIMEOUT="#CreateTimeSpan(0, 0, 20, 0)#"> 

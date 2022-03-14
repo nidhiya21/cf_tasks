@@ -1,7 +1,7 @@
 <html>
 <head>
-	<title>Task 6</title>
-	<link href="./css/bootstrap.css" rel="stylesheet" type="text/css"/> 
+<title>Task 6</title>
+<link href="./css/bootstrap.css" rel="stylesheet" type="text/css"/> 
 </head>
 <body>	
 	<div class="container mt-3">
