@@ -49,7 +49,7 @@
                         <p>Thankyou, your for updating data.Your updated datas below</p> 
                         <p>Image Name is : 
                             <a href="cf_14detail.cfm?name=#form.imageName#&desc=#form.imageDescription#&img=#destinationImage#"> 
-                                #form.imageName#</a>
+                            #form.imageName#</a>
                         </p>
                         <img src="./images/thumb/#form.imageName#.#cffile.serverFileExt#"/>
                 <cfelse>

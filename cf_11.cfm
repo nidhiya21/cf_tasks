@@ -21,12 +21,14 @@
     </cfscript>
     <div class="container mt-3">
         <h2>Task 11</h2>
+        <cfoutput>
         <cfset res = mulitiply(1,2)>
-             Result is : <cfdump var=#res#> <br>
+             Result is : #res#<br>
         <cfset res1 = mulitiply(1,2,3)>
-             Result is :<cfdump var=#res1#><br>
+             Result is :#res1#<br>
         <cfset res2 = mulitiply(1,2,3,4)>
-             Result is :<cfdump var=#res2#> <br>
+             Result is :#res2# <br>
+        </cfoutput>     
     </div>
 </body>
 </html>

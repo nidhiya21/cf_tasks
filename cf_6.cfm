@@ -27,7 +27,7 @@
 					myStruct=StructNew();
 					StructInsert(myStruct,"#form.textKey#","#form.textVal#",true);
 				</cfscript>	
-					<cfoutput>#myStruct#</cfoutput> 
+				<cfdump var="#mystruct#" > 
 			</cfif>
 		</div>
 	</div>

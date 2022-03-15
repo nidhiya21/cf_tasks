@@ -16,7 +16,7 @@
                     <input name="inputNumber" type="text"  validate="regex"
                     pattern="[1-9]"  message="Please enter only valid integers less than  10!">
                 </div>
-                    <input name="inputSubmit" class="btn btn-primary" type="submit" validateAt="onSubmit" >
+                <input name="inputSubmit" class="btn btn-primary" type="submit" validateAt="onSubmit" >
             </form>
             <cfif structKeyExists(form,'inputSubmit')>
                 <cfinvoke component="components.cf_12" method="GetSpecificUserVal" returnvariable="result">
@@ -28,12 +28,12 @@
                 <table border="1">
                         <th>firstname</th>
                         <th>lastname</th>
-                    <cfloop query = "result1" >     
-                        <tr> 
-                            <td>#result1.firstName#</td>
-                            <td>#result1.lastName#</td>
-                        </tr>
-                    </cfloop>
+                        <cfloop query = "result1" >     
+                            <tr> 
+                                <td>#result1.firstName#</td>
+                                <td>#result1.lastName#</td>
+                            </tr>
+                        </cfloop>
                 </table>
             </cfif> 
         </div>

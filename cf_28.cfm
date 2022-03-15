@@ -20,7 +20,7 @@
             <cfif #getUsersDet.recordcount# EQ 1>
                 <cfset Session.LoggedIn = "1">
                 <cfset Session.username = "#getUsersDet.username#">
-                <CFSET Session.roles = "#getUsersDet.role#">    
+                <cfset Session.roles = "#getUsersDet.role#">    
                 <cflocation url="cf28_welcome.cfm" addtoken="No"> 
             <cfelse>
                 <cflocation url="cf_28.cfm?file=error" addtoken="No">
