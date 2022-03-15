@@ -27,14 +27,14 @@
                 </cfif>            
         </cfif>
         <cfif showForm>
-            <cfinvoke component="cf_20" method="makeRandomString" returnvariable="captcha">
+            <cfinvoke component="components.cf_20" method="makeRandomString" returnvariable="captcha">
             </cfinvoke>
             <cfset captchaHash = hash(captcha)>
             <p>Please fill the form below.</p>          
                 <cfif isDefined("errors")>
                     <p><b>Correct these errors:<br />#errors#</b> </p>
                 </cfif>            
-                <form action="#cgi.script_name#" method="post" >
+                <form action="" method="post" >
                     <table>
                         <tr>
                             <td>Email:</td>

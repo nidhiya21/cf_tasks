@@ -19,11 +19,11 @@
                     <input name="inputSubmit" class="btn btn-primary" type="submit" validateAt="onSubmit" >
             </form>
             <cfif structKeyExists(form,'inputSubmit')>
-                <cfinvoke component="cf_12" method="GetSpecificUserVal" returnvariable="result">
+                <cfinvoke component="components.cf_12" method="GetSpecificUserVal" returnvariable="result">
                     <cfinvokeargument name="inputNum"  value = "#form.inputNumber#" />
                 </cfinvoke>
                 Data of Entered number is: #result#
-                <cfinvoke component="cf_12" method="GetAllUser" returnvariable="result1">  
+                <cfinvoke component="components.cf_12" method="GetAllUser" returnvariable="result1">  
                 </cfinvoke> 
                 <table border="1">
                         <th>firstname</th>

@@ -10,16 +10,16 @@
 <cfoutput>
     <div class="container mt-3">
            <h2>Task 15</h2>
-			<cfinvoke component="cf_15" method="multiply" returnvariable="result">
+			<cfinvoke component="components.cf_15" method="multiply" returnvariable="result">
 				<cfinvokeargument name="arg1" value="1"/> 
 				<cfinvokeargument name="arg2" value="2"/> 
-				<cfinvokeargument name="arg3" value="3"/>  
+				<cfinvokeargument name="arg3" value="3"/>   
 			</cfinvoke>
 			cfinvoke UsingArgument  : #result#<br>
-			<cfobject name="tellMultiply" component="cf_15">
+			<cfobject name="tellMultiply" component="components.cf_15">
 			<cfinvoke component="#tellMultiply#" method="multiply">
 			cf using object  : #tellMultiply.Multiply(3,4,5)#<br>
-			<cfset	tellMultiply=createObject("component","cf_15")>
+			<cfset	tellMultiply=createObject("component","components.cf_15")>
 			<cfset	result=tellMultiply.Multiply(2,3)>
 			cf using instance #result#
 	</div>
