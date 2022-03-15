@@ -17,11 +17,8 @@
 					<br/>
 				</div>
 				<div class="form-group col-md-4">
-					<label>
-						Enter Value:
-					</label>
+					<label>Enter Value:</label>
 					<input type="textVal" class="form-control" name="textVal" id="textVal"/>
-					
 				</div><br/>
 				<div class="form-group col-md-4">
 					<input type="submit" class="btn btn-primary"  name="formSubmit" value="Update"/>

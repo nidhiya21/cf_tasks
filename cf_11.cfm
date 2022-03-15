@@ -22,12 +22,12 @@
     <div class="container mt-3">
         <h2>Task 11</h2>
         <cfoutput>
-        <cfset res = mulitiply(1,2)>
-             Result is : #res#<br>
-        <cfset res1 = mulitiply(1,2,3)>
-             Result is :#res1#<br>
-        <cfset res2 = mulitiply(1,2,3,4)>
-             Result is :#res2# <br>
+            <cfset res = mulitiply(1,2)>
+                Result is : #res#<br>
+            <cfset res1 = mulitiply(1,2,3)>
+                Result is :#res1#<br>
+            <cfset res2 = mulitiply(1,2,3,4)>
+                Result is :#res2# <br>
         </cfoutput>     
     </div>
 </body>

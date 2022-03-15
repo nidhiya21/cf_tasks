@@ -19,7 +19,7 @@
 					<div class="form-group col-md-3">
 					<label>	Enter Value:</label>
 					<input type="textVal" class="form-control"  name="textVal" id="textVal"/>
-					<br />
+					<br/>
 				</div>
 				<div class="form-group col-md-3">
 					<input type="submit" class="btn btn-primary"  name="formSubmit" value="Update"/>

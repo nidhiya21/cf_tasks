@@ -12,11 +12,18 @@
         <div class="container">
             <form action="cf_19.cfm" name="form" method="post"> 
                  <input type="submit" value="Next Page" class="btn btn-success" name="nextpage">
-            </form> 
-            <cfif isDefined("nextpage")>
-                 <cfset cookie.VisitsCounter += 1>
-            </cfif>
-            <cfoutput>You clicked <b>#cookie.VisitsCounter#</b> times</cfoutput>
+            </form>  
+               <cfif StructKeyExists(Form,'nextpage')>       
+                    <cfif IsDefined("Cookie.VisitsCounter") is False>
+                         <cfcookie name="VisitsCounter" value=1 />
+                         <cfoutput>Total Visits : 1</cfoutput>
+                         <cfelse> 
+                         <cfset counter = #cookie.VisitsCounter# />
+                         <cfset increment = counter + 1/>
+                         <cfcookie name="VisitsCounter" value=#increment# />
+                    </cfif> 
+               </cfif> 
+            <cfoutput>You clicked <b>#VisitsCounter#</b> times</cfoutput>
         </div>
 </body> 
 </html>

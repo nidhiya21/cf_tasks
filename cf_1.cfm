@@ -17,18 +17,10 @@
             <input name="inputSubmit" class="btn btn-primary" type="submit" validateAt="onSubmit" >
       </form>
     </div>
-    <cfif structKeyExists(form,"inputSubmit") and (cgi.request_method is "post")>
-      <cfoutput>
-        <cfif(form.inputNumber EQ 5)>
-          Very Good
-        <cfelseif (form.inputNumber EQ 4)> 
-          Good
-        <cfelseif (form.inputNumber EQ 3)> 
-          Fair   
-        <cfelse> 
-          Ok
-        </cfif>
-      </cfoutput>
+    <cfif structKeyExists(form,"inputSubmit")>
+      <cfinvoke component="components.cf_1" method="displayElement" returnvariable="displayText">
+      </cfinvoke>  
+      <cfoutput>Output :#displayText#</cfoutput>
     </cfif>
 </body>
 </html>

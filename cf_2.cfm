@@ -18,13 +18,10 @@
                 <input name="inputSubmit" class="btn btn-primary" type="submit" validateAt="onSubmit" >
         </form>
     </div>
-    <cfif structKeyExists(form,"inputSubmit") and (cgi.request_method is "post")>
-      <cfswitch expression="#form.inputNumber#"> 
-          <cfcase value="5">Very Good</cfcase>
-          <cfcase value="4">Good</cfcase> 
-          <cfcase value="3">Fair</cfcase>
-          <cfdefaultcase>Ok</cfdefaultcase> 
-      </cfswitch>
+    <cfif structKeyExists(form,"inputSubmit")>
+        <cfinvoke component="components.cf_2" method="displayElement" returnvariable="displayText">
+        </cfinvoke>  
+        <cfoutput>Output :#displayText#</cfoutput>
     </cfif>
 </body>
 </html>

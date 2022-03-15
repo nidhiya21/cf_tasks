@@ -11,18 +11,15 @@
         <form method="post">
           <div class="mb-3 mt-3">
             <label for="number">Enter Number:</label>
-            <input name="inputNumber" type="text" validate="regex" pattern="[1-5]"  message="Please enter only valid integers between 1 to 5!" >
+            <input name="inputNumber" type="text"  >
           </div>
             <input name="inputSubmit" class="btn btn-primary" type="submit"  >
         </form>
     </div>
-    <cfif structKeyExists(form,"inputSubmit") and (cgi.request_method is "post")>     
-      <cfset myList="3,8,9,11,12">
-        <cfloop list="#myList#" index="item"> 
-          <cfif item%3==0>
-            <cfoutput>#item# </cfoutput>
-          </cfif>
-        </cfloop>      
+    <cfif structKeyExists(form,"inputSubmit")>     
+      <cfinvoke component="components.cf_3" method="displayElement" returnvariable="item">
+      </cfinvoke>  
+      <cfoutput>Output :#item#</cfoutput>      
     </cfif>
 </body>
 </html>
